@@ -24,25 +24,25 @@ abstract class CustonReceiver : BroadcastReceiver() {
 
     @Suppress("NON_EXHAUSTIVE_WHEN_STATEMENT")
     fun register(context: Context) {
-        when (type()?.first) {
+        when (type().first) {
             AlarmTypes.MINUTE -> AlarmManagerUtil.startByMinutes(
                 context,
                 actionKey,
-                type()?.second ?: 60,
+                type().second,
                 requestCode,
                 receiver()
             )
             AlarmTypes.HOUR -> AlarmManagerUtil.startByHours(
                 context,
                 actionKey,
-                type()?.second ?: 1,
+                type().second,
                 requestCode,
                 receiver()
             )
             AlarmTypes.DAY -> AlarmManagerUtil.startByDay(
                 context,
                 actionKey,
-                type()?.second ?: 18,
+                type().second,
                 requestCode,
                 receiver()
             )

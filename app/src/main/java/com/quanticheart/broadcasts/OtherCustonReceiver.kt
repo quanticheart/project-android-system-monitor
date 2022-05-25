@@ -12,7 +12,7 @@ class OtherCustonReceiver : CustonReceiver() {
     override val requestCode: Int
         get() = 300
 
-    override fun type(): Pair<AlarmTypes, Int> = Pair(AlarmTypes.MINUTE, 10)
+    override fun type(): Pair<AlarmTypes, Int> = Pair(AlarmTypes.MINUTE, 1)
 
     override fun callback(intent: Intent) {
         log("ALARM", "OtherCustonReceiver")

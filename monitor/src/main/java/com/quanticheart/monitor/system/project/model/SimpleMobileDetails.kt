@@ -31,7 +31,7 @@ import com.quanticheart.monitor.system.extentions.UNKNOWN_PARAM
 class SimpleMobileDetails {
     var id: String = ""
     var id2: String = ""
-    var id3: Int = 0
+    var id3: String = ""
     var id4: String = ""
     var date: String = ""
     var hardware: Hardware = Hardware()
