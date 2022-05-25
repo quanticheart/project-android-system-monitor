@@ -1,0 +1,47 @@
+{
+  "app": {
+    "appName": "Broadcasts",
+    "appVersionCode": 2.0,
+    "appVersionName": "2.0",
+    "firstInstallTime": "2022/05/23 10:03:07",
+    "lastUpdateTime": "2022/05/23 10:03:07",
+    "minSdkVersion": 24.0,
+    "packageName": "com.quanticheart.broadcasts",
+    "targetSdkVersion": 31.0
+  },
+  "battery": {
+    "charge": "charging",
+    "percentage": 59.0,
+    "plugged": "usb"
+  },
+  "connection": {
+    "dns1": "8.8.8.8",
+    "dns2": "8.8.4.4",
+    "gatewayIP": "192.168.18.1",
+    "ipv4": "192.168.18.69",
+    "ipv6": "unknown",
+    "speed": "Broadband",
+    "type": "wifi"
+  },
+  "date": "2022/05/23 10:06:16",
+  "hardware": {
+    "brand": "samsung",
+    "device": "a32",
+    "incremental": "A325MUBS2AVA1",
+    "manufacturer": "samsung",
+    "model": "SM-A325M",
+    "releaseVersion": "11",
+    "sdkInt": 30.0
+  },
+  "id": "ffffffff-fc42-bc69-ffff-ffffc023dae6",
+  "id2": "ffffffff-9245-6fe8-ffff-ffffc023dae6",
+  "location": {
+    "enable": true,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "permissionsGranted": true,
+    "systemCountry": "BR",
+    "systemLanguage": "pt"
+  },
+  "screen": "on"
+}
