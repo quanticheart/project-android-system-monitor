@@ -1,6 +1,9 @@
 package com.quanticheart.monitor.system.project.system
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Build
+import android.provider.Settings
 import java.util.*
 
 /**
@@ -95,3 +98,11 @@ val deviceUUID3: String
 
 val uuid: String
     get() = UUID.randomUUID().toString()
+
+val Context.deviceId: String
+    @SuppressLint("HardwareIds")
+    get() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
+    } else {
+        Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
+    }

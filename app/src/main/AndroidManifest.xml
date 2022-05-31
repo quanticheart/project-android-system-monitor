@@ -19,8 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".sendMacAddress.InsertMacActivity" />
 
         <receiver android:name=".OtherCustonReceiver" />
+        <receiver android:name=".MobileDataReceiver" />
 
     </application>
 

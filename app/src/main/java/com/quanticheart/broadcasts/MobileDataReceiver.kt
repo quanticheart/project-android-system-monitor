@@ -6,9 +6,9 @@ import com.quanticheart.monitor.system.alarms.AlarmTypes
 import com.quanticheart.monitor.system.alarms.CustonReceiver
 import com.quanticheart.monitor.system.extentions.log
 
-class OtherCustonReceiver : CustonReceiver() {
+class MobileDataReceiver : CustonReceiver() {
     override val actionKey: String
-        get() = "OtherCustonReceiver"
+        get() = "mobileDataCollect"
 
     override val requestCode: Int
         get() = 300
@@ -16,7 +16,8 @@ class OtherCustonReceiver : CustonReceiver() {
     override fun type(): Pair<AlarmTypes, Int> = Pair(AlarmTypes.MINUTE, 1)
 
     override fun callback(context: Context, intent: Intent) {
-        log("ALARM", "OtherCustonReceiver")
+        log("ALARM", "collectData in MobileDataReceiver")
+        context.collectData()
     }
 
     override fun receiver() = this::class.java

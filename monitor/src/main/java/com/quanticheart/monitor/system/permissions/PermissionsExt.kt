@@ -24,6 +24,7 @@ private val permissions: Array<String>
     get() = arrayOf(
         Manifest.permission.CAMERA,
         Manifest.permission.READ_PHONE_STATE,
+        Manifest.permission.READ_PHONE_NUMBERS,
         Manifest.permission.ACCESS_COARSE_LOCATION,
         Manifest.permission.ACCESS_FINE_LOCATION
     )

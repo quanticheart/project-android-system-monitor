@@ -12,13 +12,13 @@ abstract class CustonReceiver : BroadcastReceiver() {
 
     abstract fun type(): Pair<AlarmTypes, Int>
 
-    abstract fun callback(intent: Intent)
+    abstract fun callback(context: Context, intent: Intent)
 
     abstract fun receiver(): Class<*>
 
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.hasExtra(AlarmConstants.custonKey)) {
-            callback(intent)
+            callback(context, intent)
         }
     }
 

@@ -6,6 +6,10 @@ import com.quanticheart.monitor.system.project.model.SimpleMobileDetails
 val Context.preferences: ProjectSharedPreferences
     get() = ProjectSharedPreferences(this)
 
+fun Context.preferences(name: String): ProjectSharedPreferences {
+    return ProjectSharedPreferences(this, name)
+}
+
 private const val detailsListKey = "details"
 private const val detailsListKeyTmp = "detailsTMP"
 

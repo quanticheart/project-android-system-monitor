@@ -6,10 +6,10 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
 
-class ProjectSharedPreferences(context: Context) {
+class ProjectSharedPreferences(context: Context, name: String? = null) {
 
     val pref = context.getSharedPreferences(
-        (context.packageName + "Prefs"),
+        name ?: (context.packageName + "Prefs"),
         Context.MODE_PRIVATE
     )!!
     val editor: SharedPreferences.Editor = pref.edit()

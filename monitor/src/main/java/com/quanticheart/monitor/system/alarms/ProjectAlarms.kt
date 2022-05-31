@@ -24,6 +24,6 @@ object ProjectAlarms {
 
     private fun startAlarmByMinutes(context: Context) {
         startByMinutes(context, 1)
-        startByMinutes(context, "otherActionMinute", 15,15)
+//        startByMinutes(context, "otherActionMinute", 15,15)
     }
 }

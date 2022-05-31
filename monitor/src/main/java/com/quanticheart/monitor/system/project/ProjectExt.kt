@@ -1,8 +1,10 @@
 package com.quanticheart.monitor.system.project
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.StrictMode
 import android.util.Log
+import com.quanticheart.monitor.system.extentions.telephonyManager
 import com.quanticheart.monitor.system.extentions.toJson
 import com.quanticheart.monitor.system.project.model.MobileDetails
 import com.quanticheart.monitor.system.project.model.SimpleMobileDetails
@@ -32,6 +34,8 @@ import com.quanticheart.monitor.system.system.uniqueid.uniqueID
 import com.quanticheart.monitor.system.system.useragent.defaultUserAgent
 import com.quanticheart.monitor.system.system.wifi.getWifiDetails
 
+
+@SuppressLint("MissingPermission")
 fun Context.getInfo() {
     val policy = StrictMode.ThreadPolicy.Builder().permitNetwork().build()
     StrictMode.setThreadPolicy(policy)
@@ -63,9 +67,14 @@ fun Context.getInfo() {
     info.uniqueID = uniqueID
     info.userAgent = defaultUserAgent()
 
+    val manager = telephonyManager
+
+    //For 3G check
+    Log.e("TEST", manager.networkOperatorName ?: "NULL")
+
     val json = info.toJson()
+    Log.e("JOSN", deviceId)
     Log.e("JOSN", json)
-//    val window = getMobScreen(window)
 }
 
 fun Context.getSimpleDetails(): SimpleMobileDetails {
@@ -86,10 +95,6 @@ fun Context.getSimpleDetails(): SimpleMobileDetails {
     info.connection = getNetworkInfo()
 
     return info
-}
-
-fun Context.collectData() {
-    insertSimpleDetails(getSimpleDetails())
 }
 
 fun Context.sendDataCollected() {
