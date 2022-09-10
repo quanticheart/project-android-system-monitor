@@ -28,6 +28,12 @@ fun Context.updateToken(newToken: String): Boolean {
     return verifyMac()
 }
 
+fun Context.getMacAndToken(): Pair<String, String> {
+    val session = preferencesMobileData.getString("mac")
+    val data = session?.split("##")
+    return Pair(data?.get(0) ?: "", data?.get(1) ?: "")
+}
+
 fun Context.sendDataToServer(mobileDetails: SimpleMobileDetails) {
     val repository = InsertMacRepository(this)
     repository.sendMobilePingToServer(mobileDetails.toJson()) {}
@@ -37,11 +43,4 @@ fun Context.collectData() {
 //    insertSimpleDetails(getSimpleDetails())
     val details = getSimpleDetails()
     sendDataToServer(details)
-}
-
-
-fun Context.getMacAndToken(): Pair<String, String> {
-    val session = preferencesMobileData.getString("mac")
-    val data = session?.split("##")
-    return Pair(data?.get(0) ?: "", data?.get(1) ?: "")
 }

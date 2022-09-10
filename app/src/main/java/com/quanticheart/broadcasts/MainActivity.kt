@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.quanticheart.broadcasts.databinding.ActivityMainBinding
+import com.quanticheart.broadcasts.extentions.getMacAndToken
 import com.quanticheart.broadcasts.extentions.verifyMac
 import com.quanticheart.broadcasts.sendMacAddress.InsertMacActivity
 import com.quanticheart.monitor.asyncTask.TaskListener
@@ -18,9 +19,11 @@ import com.quanticheart.monitor.project.getSimpleDetails
 import com.quanticheart.monitor.project.model.SimpleMobileDetails
 
 class MainActivity : AppCompatActivity() {
+
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.showNortification.setOnClickListener {
             debugNotification("teste")
@@ -45,6 +48,10 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         if (!verifyMac()) {
             startActivity(Intent(this, InsertMacActivity::class.java))
+        } else {
+            val data = getMacAndToken()
+            binding.id.text = data.first
+            binding.token.text = data.second
         }
     }
 
