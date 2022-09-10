@@ -5,8 +5,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.quanticheart.broadcasts.databinding.MacMainBinding
-import com.quanticheart.monitor.system.extentions.isValidMacAddress
-import com.quanticheart.monitor.system.project.system.uuid
+import com.quanticheart.monitor.extentions.isValidMacAddress
+import com.quanticheart.monitor.project.system.uuid
 
 class InsertMacActivity : AppCompatActivity() {
 

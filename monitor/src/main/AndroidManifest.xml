@@ -42,7 +42,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".system.alarms.AlarmActionReceiver" />
+        <receiver android:name="com.quanticheart.monitor.alarms.AlarmActionReceiver" />
     </application>
 
 </manifest>

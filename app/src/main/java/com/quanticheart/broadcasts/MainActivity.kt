@@ -6,15 +6,16 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.quanticheart.broadcasts.databinding.ActivityMainBinding
+import com.quanticheart.broadcasts.extentions.verifyMac
 import com.quanticheart.broadcasts.sendMacAddress.InsertMacActivity
-import com.quanticheart.monitor.system.asyncTask.TaskListener
-import com.quanticheart.monitor.system.asyncTask.startTask
-import com.quanticheart.monitor.system.extentions.toJson
-import com.quanticheart.monitor.system.notification.debugNotification
-import com.quanticheart.monitor.system.permissions.requestPermissions
-import com.quanticheart.monitor.system.project.getInfo
-import com.quanticheart.monitor.system.project.getSimpleDetails
-import com.quanticheart.monitor.system.project.model.SimpleMobileDetails
+import com.quanticheart.monitor.asyncTask.TaskListener
+import com.quanticheart.monitor.asyncTask.startTask
+import com.quanticheart.monitor.extentions.toJson
+import com.quanticheart.monitor.notification.debugNotification
+import com.quanticheart.monitor.permissions.requestPermissions
+import com.quanticheart.monitor.project.getInfo
+import com.quanticheart.monitor.project.getSimpleDetails
+import com.quanticheart.monitor.project.model.SimpleMobileDetails
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

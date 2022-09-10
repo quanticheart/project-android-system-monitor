@@ -2,8 +2,9 @@ package com.quanticheart.broadcasts.sendMacAddress
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.quanticheart.broadcasts.AppApplication
-import com.quanticheart.broadcasts.insertMacAndToken
+import com.quanticheart.broadcasts.application.AppApplication
+import com.quanticheart.broadcasts.extentions.insertMacAndToken
+import com.quanticheart.broadcasts.sendMacAddress.data.InsertMacRepository
 
 class InsertMacViewModel : ViewModel() {
 
