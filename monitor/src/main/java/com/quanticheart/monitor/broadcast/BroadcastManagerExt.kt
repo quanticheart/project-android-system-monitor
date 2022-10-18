@@ -1,4 +1,4 @@
-package com.quanticheart.core.system.broadcast
+package com.quanticheart.monitor.broadcast
 
 import android.content.BroadcastReceiver
 import android.content.Context

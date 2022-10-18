@@ -11,6 +11,7 @@ import com.quanticheart.monitor.extentions.log
 import com.quanticheart.monitor.notification.debugNotification
 import com.quanticheart.monitor.project.sendDataCollected
 import com.quanticheart.monitor.project.system.uuid
+import com.quanticheart.sendcustonaction.monitor.receivers.boot.registerMonitor
 
 class AppApplication : Application(), AlarmActionListeners {
 
@@ -29,6 +30,7 @@ class AppApplication : Application(), AlarmActionListeners {
         }
 //        OtherCustonReceiver().register(this)
         MobileDataReceiver().register(this)
+        registerMonitor()
     }
 
     override fun receiveMinuteAction() {
