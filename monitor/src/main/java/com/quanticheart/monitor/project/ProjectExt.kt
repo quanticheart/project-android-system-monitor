@@ -73,7 +73,7 @@ fun Context.getInfo() {
     Log.e("TEST", manager.networkOperatorName ?: "NULL")
 
     val json = info.toJson()
-    Log.e("JOSN", deviceId)
+//    Log.e("JOSN", deviceId.toString())
     Log.e("JOSN", json)
 }
 

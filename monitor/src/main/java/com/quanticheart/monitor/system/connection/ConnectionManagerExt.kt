@@ -99,5 +99,6 @@ fun Context.systemConnectionData() {
         NetworkInfo.State.DISCONNECTED -> {}
         NetworkInfo.State.DISCONNECTING -> {}
         NetworkInfo.State.UNKNOWN -> {}
+        else ->{}
     }
 }

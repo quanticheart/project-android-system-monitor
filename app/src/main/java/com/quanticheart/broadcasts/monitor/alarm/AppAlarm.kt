@@ -36,7 +36,7 @@ object AppAlarm {
             AlarmManager.RTC_WAKEUP,
             System.currentTimeMillis() + (1 * 60000),
             (1 * 60000).toLong(),
-            pi
+            pi!!
         )
     }
 

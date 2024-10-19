@@ -15,10 +15,12 @@ interface TaskListener<T> {
 internal class TaskDetails<T>(private val listener: TaskListener<T>) :
     AsyncTask<Context, Unit, T>() {
 
+    @Deprecated("Deprecated in Java")
     override fun doInBackground(vararg context: Context): T {
         return listener.background(context.first())
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onPostExecute(result: T) {
         super.onPostExecute(result)
         listener.foreground(result)
